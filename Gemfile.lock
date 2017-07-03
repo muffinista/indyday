@@ -1,50 +1,73 @@
 GIT
-  remote: git://github.com/muffinista/chatterbot.git
-  revision: 5b7c002d3b231f199b17da3045000a059918151f
-  branch: 2.0.0
+  remote: https://github.com/muffinista/chatterbot.git
+  revision: 06da6caada907e607ffc6b42749f698c554b9852
   specs:
-    chatterbot (2.0.0)
+    chatterbot (2.0.4)
       colorize (>= 0.7.3)
       launchy (>= 2.4.2)
-      oauth (>= 0.4.7)
-      twitter (= 5.8.0)
+      oauth (~> 0.4.7)
+      twitter (~> 6.1.0)
+
+GIT
+  remote: https://github.com/tootsuite/mastodon-api.git
+  revision: 948610867da933c0b3a681562cca01b483b8e876
+  specs:
+    mastodon-api (1.1.0)
+      addressable (~> 2.4)
+      buftok
+      http (~> 2.0)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.3.8)
+    addressable (2.5.1)
+      public_suffix (~> 2.0, >= 2.0.2)
     buftok (0.2.0)
-    colorize (0.7.7)
+    colorize (0.8.1)
+    domain_name (0.5.20170404)
+      unf (>= 0.0.5, < 1.0.0)
     equalizer (0.0.11)
-    faraday (0.9.1)
+    faraday (0.11.0)
       multipart-post (>= 1.2, < 3)
-    http (0.5.1)
-      http_parser.rb
+    http (2.2.2)
+      addressable (~> 2.3)
+      http-cookie (~> 1.0)
+      http-form_data (~> 1.0.1)
+      http_parser.rb (~> 0.6.0)
+    http-cookie (1.0.3)
+      domain_name (~> 0.5)
+    http-form_data (1.0.3)
     http_parser.rb (0.6.0)
-    json (1.8.3)
     launchy (2.4.3)
       addressable (~> 2.3)
     memoizable (0.4.2)
       thread_safe (~> 0.3, >= 0.3.1)
     multipart-post (2.0.0)
-    naught (1.0.0)
+    naught (1.1.0)
     oauth (0.4.7)
-    simple_oauth (0.2.0)
-    thread_safe (0.3.5)
-    twitter (5.8.0)
-      addressable (~> 2.3)
+    public_suffix (2.0.5)
+    simple_oauth (0.3.1)
+    thread_safe (0.3.6)
+    twitter (6.1.0)
+      addressable (~> 2.5)
       buftok (~> 0.2.0)
-      equalizer (~> 0.0.9)
-      faraday (~> 0.9.0)
-      http (~> 0.5.0)
+      equalizer (= 0.0.11)
+      faraday (~> 0.11.0)
+      http (~> 2.1)
       http_parser.rb (~> 0.6.0)
-      json (~> 1.8)
-      memoizable (~> 0.4.0)
-      naught (~> 1.0)
-      simple_oauth (~> 0.2.0)
+      memoizable (~> 0.4.2)
+      naught (~> 1.1)
+      simple_oauth (~> 0.3.1)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.4)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   chatterbot!
+  mastodon-api!
+
+BUNDLED WITH
+   1.14.6
