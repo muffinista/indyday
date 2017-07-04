@@ -29,7 +29,7 @@ data.each { |entry|
     last_tweet = client.update_with_media entry["line"], f, opts
   else
     f = File.open(entry["image"])
-    last_tweet = client.update_with_media entry["line"], f)
+    last_tweet = client.update_with_media entry["line"], f
   end
 
   sleep entry["ticks"].to_i
@@ -44,6 +44,7 @@ data.each { |entry|
   if last_status
     f = File.open(entry["image"])
     media = mastodon.upload_media(f)
+
     last_status =  mastodon.create_status(
       entry["line"],
       in_reply_to_id: last_status.id,
