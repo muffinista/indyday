@@ -15,25 +15,7 @@ mastodon = Mastodon::REST::Client.new(base_url: 'https://botsin.space', bearer_t
 
 data = JSON.parse(File.read("speech.json"))
 
-last_tweet = nil
 last_status = nil
-
-data.each { |entry|
-  puts entry.inspect
-  puts entry["line"]
-
-  opts = {}
-  if last_tweet
-    opts[:in_reply_to_status_id] = last_tweet.id
-    f = File.open(entry["image"])
-    last_tweet = client.update_with_media entry["line"], f, opts
-  else
-    f = File.open(entry["image"])
-    last_tweet = client.update_with_media entry["line"], f
-  end
-
-  sleep entry["ticks"].to_i
-}
 
 
 data.each { |entry|
