@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 
 require 'rubygems'
-require 'chatterbot/dsl'
 
 require 'mastodon'
 token = ENV["MASTODON_TOKEN"]
